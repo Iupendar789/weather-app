@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind & Libraries -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style12.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <!-- Backdrop -->
+  <div class="backdrop"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <h1 class="title">Weather App</h1>
+    <p class="subtitle">Search any city worldwide and get the latest conditions at a glance.</p>
+
+    <!-- Search -->
+    <div class="search-container">
+      <div class="search-bar-wrapper">
+        <i data-lucide="search" class="icon-search"></i>
+        <input type="text" placeholder="Search city…" class="search-bar" />
+        <button class="search">Search</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Weather Card -->
+  <main class="main-content">
+    <div class="weather loading weather-card">
+      <h2 class="city">Weather in …</h2>
+
+      <div class="weather-info">
+        <!-- Icon + Description -->
+        <div class="info-block center">
+          <img src="" class="icon" alt="" />
+          <p class="description"></p>
+        </div>
+
+        <!-- Temperature -->
+        <div class="info-block temp-block">
+          <p class="temp">--°C</p>
+          <p class="label">Current Temperature</p>
+        </div>
+
+        <!-- Details -->
+        <div class="info-block details">
+          <div><i data-lucide="droplet" class="icon-small"></i><p class="humidity">Humidity: --%</p></div>
+          <div><i data-lucide="wind" class="icon-small"></i><p class="wind">Wind speed: -- km/h</p></div>
+        </div>
+      </div>
+
+      <!-- Chart -->
+      <div class="trend">
+        <h3>5-Day Trend (Demo)</h3>
+        
+        <canvas id="tempChart"></canvas>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    Powered by OpenWeather & Unsplash
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
