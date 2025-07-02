@@ -29,7 +29,7 @@ new Chart(ctx, {
 
 /* Weather API logic */
 const weather = {
-  apiKey: '7ec94b377c15e672296bdace9921ecdf',
+  apiKey: 'API KEY',
   fetchWeather(city) {
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${this.apiKey}`)
       .then(r => {
